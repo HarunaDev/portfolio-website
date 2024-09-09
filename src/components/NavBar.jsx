@@ -1,7 +1,15 @@
+import { Link } from "react-router-dom"
+
 function NavBar() {
     return (
         <nav>
-            <h1>Nav Bar</h1>
+            <Link to="/">Haruna Alvin</Link>
+
+            <ul>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/works">Works</Link></li>
+            </ul>                            
         </nav>
     )
 }
