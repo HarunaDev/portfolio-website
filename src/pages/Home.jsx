@@ -1,8 +1,10 @@
+import Banner from "../components/Banner"
+
 function Home() {
     return (
-        <section>
-            <h1 className="bg-[red]">Home Page</h1>
-        </section>
+        <main>
+            <Banner />
+        </main>
     )
 }
 
