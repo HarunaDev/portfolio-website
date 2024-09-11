@@ -1,23 +1,16 @@
 'use client'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  Popover,
-  PopoverGroup,
-} from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { Dialog, DialogPanel, Disclosure, Popover, PopoverGroup } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import ResumeButton from './ResumeButton'
+
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
+    <header className="bg-background">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
@@ -36,22 +29,23 @@ export default function NavBar() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Link to="/about" className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/about" className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-light">
               About
             </Link>
           </Popover>
 
-          <Link to="/works" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/works" className="text-lg font-semibold leading-6 text-light">
             Works
           </Link>
-          <Link to="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/contact" className="text-lg font-semibold leading-6 text-light">
             Contact
           </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Resume
-          </a>
+          </a> */}
+          <ResumeButton />
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">

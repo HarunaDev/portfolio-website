@@ -9,6 +9,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: 'var(--bg-color)',
+        primary: 'var(--primary-color)',
+        secondary: 'var(--secondary-color)',
+        light: 'var(--light-color)',
+      }
     },
   },
   plugins: [
