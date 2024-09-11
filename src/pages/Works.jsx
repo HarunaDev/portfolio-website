@@ -1,8 +1,9 @@
 import CtaButton from "../components/CtaButton"
+import Slider from "../components/Slider"
 
 function Works() {
     return (
-        <section className="bg-background h-[700px]">
+        <section className="bg-background h-[800px]">
             <div className="h-1/2 px-40 py-16">
                 <h6 className="text-light font-semibold text-lg mb-20">ABOUT MY WORK</h6>
 
@@ -16,6 +17,9 @@ function Works() {
                     </div>
                 </div>
             </div>
+
+            <Slider />
+
         </section>
     )
 }
