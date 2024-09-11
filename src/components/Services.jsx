@@ -3,7 +3,7 @@ import ServiceCard from "./ServiceCard"
 function Services() {
     return (
         <section className="bg-background h-[800px] py-16">
-            <h6 className="text-center text-secondary font-bold text-2xl mb-12">Services</h6>
+            <h6 className="text-center text-secondary font-bold text-2xl mb-12">SERVICES</h6>
 
             <h2 className="text-center text-4xl text-light font-semibold w-[555px] mx-auto mb-24">Crafting custom solutions for your unique challenges.</h2>
 
