@@ -1,32 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import CtaButton from "../components/CtaButton";
 import Slider from "../components/Slider";
 import ResumeButton from "../components/ResumeButton";
 
 function Works() {
-    const [canScroll, setCanScroll] = useState(false);
-
-    const handleSliderEnd = (isEndReached) => {
-        setCanScroll(isEndReached);
-    };
-
-    useEffect(() => {
-        if (!canScroll) {
-            // Disable vertical scrolling
-            document.body.style.overflowY = 'hidden';
-        } else {
-            // Enable vertical scrolling
-            document.body.style.overflowY = 'auto';
-        }
-
-        return () => {
-            // Cleanup on component unmount
-            document.body.style.overflowY = 'auto';
-        };
-    }, [canScroll]);
-
     return (
         <>
             {/* First Section with Page Transition */}
@@ -59,7 +37,7 @@ function Works() {
                 </div>
 
                 {/* Horizontal Scroll Slider Component */}
-                <Slider onEndReached={handleSliderEnd} />
+                <Slider />
             </motion.section>
 
             {/* Second Section with Scroll Animation */}
