@@ -9,28 +9,28 @@ function Works() {
         <>
             {/* First Section with Page Transition */}
             <motion.section
-                className="bg-background h-[800px]"
-                initial={{ opacity: 0, y: 50 }} // initial state before the page is fully visible
-                animate={{ opacity: 1, y: 0 }} // animation when the page is loaded
-                transition={{ duration: 0.8 }} // smooth transition
+                className="bg-background py-8 px-4 sm:px-8 md:px-16 lg:px-40 h-auto"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
             >
-                <div className="h-1/2 px-40 py-16">
-                    <h6 className="text-light font-semibold text-lg mb-20">ABOUT MY WORK</h6>
+                <div className="text-center md:text-left max-w-6xl mx-auto py-8">
+                    <h6 className="text-light font-semibold text-base md:text-lg mb-6">ABOUT MY WORK</h6>
 
-                    <div className="flex justify-between items-center h-1/2">
-                        <h2 className="text-light font-bold text-4xl w-[500px]">
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
+                        <h2 className="text-light font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl w-full md:w-[500px] mb-8 md:mb-0">
                             Dive in to explore how I turn ideas into functional, user-centric solutions.
                         </h2>
 
-                        <div className="h-full">
-                            <h4 className="text-semibold text-light text-2xl w-[250px] mb-4">
+                        <div className="text-center md:text-left">
+                            <h4 className="text-semibold text-light text-xl sm:text-2xl mb-4">
                                 Checkout my github to see more projects
                             </h4>
 
                             <CtaButton
                                 url="https://github.com/HarunaDev"
                                 text="View more"
-                                styles="border-2 border-primary bg-primary px-4 py-2 rounded font-semibold text-light text-lg"
+                                styles="border-2 border-primary bg-primary px-4 py-2 rounded font-semibold text-light text-base sm:text-lg"
                             />
                         </div>
                     </div>
@@ -42,23 +42,25 @@ function Works() {
 
             {/* Second Section with Scroll Animation */}
             <motion.section
-                className="h-[600px] bg-background flex flex-col justify-center items-center"
-                initial={{ opacity: 0, scale: 0.8 }} // start with smaller and less visible
-                whileInView={{ opacity: 1, scale: 1 }} // animate to full size and opacity
-                transition={{ duration: 0.8, delay: 0.8 }} // smooth transition with a delay
-                viewport={{ once: true, amount: 0.2 }} // only animates when 20% of the section is in view
+                className="bg-background py-8 px-4 sm:px-8 md:px-16 flex flex-col justify-center items-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                viewport={{ once: true, amount: 0.2 }}
             >
-                <h6 className="mb-16 text-xl text-primary font-semibold">Let's Talk</h6>
+                <h6 className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold mb-8">
+                    Let's Talk
+                </h6>
 
-                <h1 className="text-6xl text-light mb-16 text-center font-semibold w-[800px]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-light font-semibold text-center mb-8 md:mb-12 w-full md:w-[800px]">
                     Ready to build something great? Let's connect and collaborate!
                 </h1>
 
-                <div>
+                <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
                     <CtaButton
                         url="/contact"
                         text="Contact me"
-                        styles="px-4 py-2 text-xl rounded font-semibold bg-primary text-light border-2 border-primary mr-8"
+                        styles="px-4 py-2 text-base sm:text-lg rounded font-semibold bg-primary text-light border-2 border-primary mb-4 md:mb-0"
                     />
                     <ResumeButton />
                 </div>
