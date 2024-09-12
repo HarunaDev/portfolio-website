@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -10,17 +11,18 @@ const imgVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-function Banner(prop) {
+function Banner({ header, header2, img }) {
   return (
-    <section className="h-[650px] px-48 bg-background flex justify-between items-center">
+    <section className="h-[400px] md:h-[500px] lg:h-[650px] px-4 md:px-8 lg:px-16 mb-6 bg-background flex flex-col lg:flex-row justify-between items-center">
       <motion.div
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5, delay: 0.3 }}
         variants={textVariants}
+        className="text-center lg:text-left lg:mb-0 lg:mr-8"
       >
-        {prop.header}
-        {prop.header2}
+        {header}
+        {header2}
       </motion.div>
 
       <motion.div
@@ -28,8 +30,9 @@ function Banner(prop) {
         animate="visible"
         transition={{ duration: 0.5, delay: 0.5 }}
         variants={imgVariants}
+        className="w-full lg:w-auto mt-6 lg:mt-0 lg:ml-8"
       >
-        {prop.img}
+        {img}
       </motion.div>
     </section>
   );
