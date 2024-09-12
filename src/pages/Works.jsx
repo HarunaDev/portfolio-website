@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import CtaButton from "../components/CtaButton";
-import Slider from "../components/Slider";
+import Slider from "../components/Slider"; // The horizontal scroll slider
 import ResumeButton from "../components/ResumeButton";
 
 function Works() {

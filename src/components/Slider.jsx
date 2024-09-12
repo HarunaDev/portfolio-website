@@ -8,29 +8,30 @@ function Slider() {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Calculate the scroll progress relative to the section containing the slider
             if (containerRef.current) {
                 const { top, bottom, height } = containerRef.current.getBoundingClientRect();
                 const windowHeight = window.innerHeight;
 
+                // Calculate scroll progress based on the slider's position in the viewport
                 if (top <= windowHeight && bottom >= 0) {
-                    const visibleArea = Math.min(windowHeight, bottom) - Math.max(0, top);
-                    const scrollAmount = Math.max(0, visibleArea / height);
-                    setScrollProgress(1 - scrollAmount);
+                    const scrollY = windowHeight - top;
+                    const progress = Math.min(Math.max(scrollY / (height + windowHeight), 0), 1);
+
+                    setScrollProgress(progress); // Set the horizontal scroll progress
                 }
             }
         };
 
-        // Add scroll event listener
+        // Add event listener for scroll
         window.addEventListener("scroll", handleScroll);
 
-        // Clean up the scroll event listener on component unmount
+        // Clean up the listener on unmount
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <section className="h-[800px] bg-background" ref={containerRef}>
-            <h1 className="text-light text-center text-4xl mt-12 mb-8">This is the slider</h1>
+        <section className="h-[600px] bg-background" ref={containerRef}>
+            <h1 className="text-light text-center text-4xl mt-12 mb-16">This is the slider</h1>
 
             <motion.div
                 ref={sliderRef}
@@ -39,33 +40,22 @@ function Slider() {
             >
                 <motion.div
                     className="flex space-x-8"
-                    style={{ x: `${-scrollProgress * 100}%` }} // Move the slides based on scroll progress
+                    style={{
+                        x: `${-scrollProgress * (300 * 7)}px`, // Smooth horizontal scroll progress based on vertical scroll
+                    }}
                 >
                     {/* Example Cards inside the Slider */}
-                    <motion.div className="min-w-[300px] bg-primary text-light rounded-md p-8">
-                        Card 1
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-secondary text-light rounded-md p-8">
-                        Card 2
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-primary text-light rounded-md p-8">
-                        Card 3
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-secondary text-light rounded-md p-8">
-                        Card 4
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-primary text-light rounded-md p-8">
-                        Card 5
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-secondary text-light rounded-md p-8">
-                        Card 6
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-primary text-light rounded-md p-8">
-                        Card 7
-                    </motion.div>
-                    <motion.div className="min-w-[300px] bg-secondary text-light rounded-md p-8">
-                        Card 8
-                    </motion.div>
+                    {Array.from({ length: 8 }).map((_, index) => (
+                        <motion.div
+                            key={index}
+                            className={`min-w-[300px] bg-${index % 2 === 0 ? 'primary' : 'secondary'} text-light rounded-md p-8`}
+                            style={{
+                                height: `${150 + scrollProgress * 100}px`, // Adjust height as scroll progresses
+                            }}
+                        >
+                            Card {index + 1}
+                        </motion.div>
+                    ))}
                 </motion.div>
             </motion.div>
         </section>
