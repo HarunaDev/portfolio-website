@@ -45,7 +45,7 @@ function Works() {
                 className="h-[600px] bg-background flex flex-col justify-center items-center"
                 initial={{ opacity: 0, scale: 0.8 }} // start with smaller and less visible
                 whileInView={{ opacity: 1, scale: 1 }} // animate to full size and opacity
-                transition={{ duration: 0.8 }} // smooth transition
+                transition={{ duration: 0.8, delay: 0.8 }} // smooth transition
                 viewport={{ once: true, amount: 0.2 }} // only animates when 20% of the section is in view
             >
                 <h6 className="mb-16 text-xl text-primary font-semibold">Let's Talk</h6>
