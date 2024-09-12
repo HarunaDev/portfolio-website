@@ -1,10 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import CtaButton from "../components/CtaButton";
 import Slider from "../components/Slider";
 import ResumeButton from "../components/ResumeButton";
 
 function Works() {
+    const [canScroll, setCanScroll] = useState(false);
+
+    const handleSliderEnd = (isEndReached) => {
+        setCanScroll(isEndReached);
+    };
+
+    useEffect(() => {
+        if (!canScroll) {
+            // Disable vertical scrolling
+            document.body.style.overflowY = 'hidden';
+        } else {
+            // Enable vertical scrolling
+            document.body.style.overflowY = 'auto';
+        }
+
+        return () => {
+            // Cleanup on component unmount
+            document.body.style.overflowY = 'auto';
+        };
+    }, [canScroll]);
+
     return (
         <>
             {/* First Section with Page Transition */}
@@ -36,8 +58,8 @@ function Works() {
                     </div>
                 </div>
 
-                {/* Slider Component */}
-                <Slider />
+                {/* Horizontal Scroll Slider Component */}
+                <Slider onEndReached={handleSliderEnd} />
             </motion.section>
 
             {/* Second Section with Scroll Animation */}
@@ -45,7 +67,7 @@ function Works() {
                 className="h-[600px] bg-background flex flex-col justify-center items-center"
                 initial={{ opacity: 0, scale: 0.8 }} // start with smaller and less visible
                 whileInView={{ opacity: 1, scale: 1 }} // animate to full size and opacity
-                transition={{ duration: 0.8, delay: 0.8 }} // smooth transition
+                transition={{ duration: 0.8, delay: 0.8 }} // smooth transition with a delay
                 viewport={{ once: true, amount: 0.2 }} // only animates when 20% of the section is in view
             >
                 <h6 className="mb-16 text-xl text-primary font-semibold">Let's Talk</h6>
