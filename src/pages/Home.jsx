@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Banner from "../components/Banner";
-import Img from "../assets/banner.png";
+// import Img from "../assets/banner.png";
 
 const pageVariants = {
   initial: { opacity: 0, y: -50 },
@@ -16,21 +16,9 @@ function Home() {
       exit="exit"
       variants={pageVariants}
       transition={{ duration: 0.5 }}
+      className="min-h-full"
     >
-      <Banner
-        header={
-          <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold mb-4 md:mb-6 lg:mb-8 text-light">
-            Software <span className="text-primary">Developer</span>
-          </h1>
-        }
-        header2={
-          <h2 className="text-lg md:text-xl lg:text-3xl font-semibold text-light">
-            My name is Alvin and I am passionate about crafting efficient and
-            innovative solutions.
-          </h2>
-        }
-        img={<img className="w-full md:w-auto md:ml-12 lg:ml-24" src={Img} alt="Banner Img" />}
-      />
+      <Banner/>
     </motion.main>
   );
 }

@@ -42,7 +42,7 @@ function Works() {
 
             {/* Second Section with Scroll Animation */}
             <motion.section
-                className="bg-background py-8 px-4 sm:px-8 md:px-16 flex flex-col justify-center items-center"
+                className="bg-background py-10 px-4 sm:px-8 md:px-16 flex flex-col justify-center items-center"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}

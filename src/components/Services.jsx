@@ -30,7 +30,7 @@ function Services() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.6 }}
+                    transition={{ delay: 0.6, duration: 0.6 }}
                     className="w-full max-w-xs bg-primary text-light p-6 rounded-lg shadow-md"
                 >
                     <ServiceCard text="Frontend Development" />
@@ -38,7 +38,7 @@ function Services() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1, duration: 0.6 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
                     className="w-full max-w-xs bg-primary text-light p-6 rounded-lg shadow-md"
                 >
                     <ServiceCard text="Backend Development" />
@@ -46,7 +46,7 @@ function Services() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2, duration: 0.6 }}
+                    transition={{ delay: 1, duration: 0.6 }}
                     className="w-full max-w-xs bg-primary text-light p-6 rounded-lg shadow-md"
                 >
                     <ServiceCard text="UI/UX Design" />

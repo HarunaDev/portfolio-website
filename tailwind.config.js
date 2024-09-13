@@ -14,6 +14,7 @@ module.exports = {
         primary: 'var(--primary-color)',
         secondary: 'var(--secondary-color)',
         light: 'var(--light-color)',
+        linearb: 'var(--linear-bg)'
       }
     },
   },

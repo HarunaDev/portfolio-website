@@ -30,8 +30,8 @@ function Slider() {
     }, []);
 
     return (
-        <section className="bg-background py-8 px-4 sm:px-6 md:px-8 lg:px-16" ref={containerRef}>
-            <h1 className="text-light text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 mb-12">This is the slider</h1>
+        <section className="bg-background py-12 px-4 sm:px-6 md:px-8 lg:px-16" ref={containerRef}>
+            <h1 className="text-light text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 mb-16">This is the slider</h1>
 
             <motion.div
                 ref={sliderRef}
