@@ -31,7 +31,7 @@ export default function NavBar() {
       >
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-            <img alt="Logo" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" className="h-8 w-auto" />
+            <h1 className="text-xl font-bold text-light bg-primary rounded-full p-2 lg:p-3 lg:text-3xl">A.H</h1>
           </Link>
         </div>
 

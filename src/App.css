@@ -4,7 +4,8 @@
 
 :root {
     --primary-color: #3CAF2A;
-    --secondary-color: #50D03C;
+    --project-color: rgba(5, 5, 5, 0.8);
+    --secondary-color: #50d03c23;
     --bg-color: #121212;
     --light-color: #FFFFFF;
 }

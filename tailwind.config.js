@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         background: 'var(--bg-color)',
         primary: 'var(--primary-color)',
+        project: 'var(--project-color)',
         secondary: 'var(--secondary-color)',
         light: 'var(--light-color)',
         linearb: 'var(--linear-bg)'

@@ -17,13 +17,13 @@ function Footer() {
         {/* Links Section */}
         <ul className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-6 text-[#999999]">
           <li>
-            <Link to="#" className="hover:text-primary">Github</Link>
+            <Link to="https://github.com/HarunaDev" className="hover:text-primary">Github</Link>
           </li>
           <li>
-            <Link to="#" className="hover:text-primary">LinkedIn</Link>
+            <Link to="https://www.linkedin.com/in/alvin-haruna/" className="hover:text-primary">LinkedIn</Link>
           </li>
           <li>
-            <Link to="#" className="hover:text-primary">Blog</Link>
+            <Link to="https://harunadev.hashnode.dev/" className="hover:text-primary">Blog</Link>
           </li>
           <li>
             <Link to="#" className="hover:text-primary">Email</Link>
