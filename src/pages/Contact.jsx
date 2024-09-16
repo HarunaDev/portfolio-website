@@ -1,21 +1,37 @@
 /* eslint-disable react/no-unescaped-entities */
-'use client'
-
-// import { useState } from 'react'
-
+'use client';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_h1jtm98', 'contact_form', form.current, 'Jvi-HGKbPIpM7Quzy')
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+  };
 
   return (
     <div className="bg-background px-6 py-24 sm:py-24 lg:px-8">
-
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Say Hello, Let's Start Building</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+          Say Hello, Let's Start Building
+        </h2>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form ref={form} onSubmit={sendEmail} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          
-          
           <div className="sm:col-span-2">
             <label htmlFor="full-name" className="block text-sm font-semibold leading-6 text-primary">
               Full Name
@@ -23,7 +39,7 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 id="full-name"
-                name="full-name"
+                name="user_name"
                 type="text"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 lg:text-xl text-[#33333] font-semibold shadow-sm ring-1 ring-inset ring-primary lg:placeholder:text-[#555555] lg:placeholder:font-semibold focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
@@ -31,6 +47,7 @@ export default function Contact() {
               />
             </div>
           </div>
+
           <div className="sm:col-span-2">
             <label htmlFor="email" className="block text-sm font-semibold leading-6 text-primary">
               Email
@@ -38,7 +55,7 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 id="email"
-                name="email"
+                name="user_email"
                 type="email"
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 lg:text-xl text-[#33333] font-semibold shadow-sm ring-1 ring-inset ring-primary lg:placeholder:text-[#555555] lg:placeholder:font-semibold focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
@@ -46,7 +63,7 @@ export default function Contact() {
               />
             </div>
           </div>
-          
+
           <div className="sm:col-span-2">
             <label htmlFor="message" className="block text-sm font-semibold leading-6 text-primary">
               Message
@@ -57,13 +74,12 @@ export default function Contact() {
                 name="message"
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 lg:text-xl text-[#33333] font-semibold shadow-sm ring-1 ring-inset ring-primary focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 lg:placeholder:text-[#555555] lg:placeholder:font-semibold"
-                defaultValue={''}
                 placeholder="Say hi"
               />
             </div>
           </div>
-          
         </div>
+
         <div className="mt-10">
           <button
             type="submit"
@@ -74,5 +90,5 @@ export default function Contact() {
         </div>
       </form>
     </div>
-  )
+  );
 }
