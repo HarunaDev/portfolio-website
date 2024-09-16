@@ -1,8 +1,10 @@
+import ContactBanner from "../components/ContactBanner"
+
 function Contact() {
     return (
-        <section>
-            <h1>Contact Page</h1>
-        </section>
+        <>
+            <ContactBanner />
+        </>
     )
 }
 
