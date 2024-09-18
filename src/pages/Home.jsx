@@ -16,7 +16,7 @@ function Home() {
       exit="exit"
       variants={pageVariants}
       transition={{ duration: 0.5 }}
-      className="min-h-full"
+      className="min-h-full lg:mt-[80px]"
     >
       <Banner/>
     </motion.main>
