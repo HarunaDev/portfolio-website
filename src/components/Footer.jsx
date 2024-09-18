@@ -10,7 +10,7 @@ function Footer() {
             My passion for clean design and consumer-focused solutions ensures that every project I work on meets both business goals and user needs.
           </h6>
           <small className="text-[#999999] text-xs md:text-sm lg:text-base">
-            c Alvin Haruna | All rights reserved 2024
+            &copy; Alvin Haruna | All rights reserved 2024
           </small>
         </div>
 
@@ -26,7 +26,7 @@ function Footer() {
             <Link to="https://harunadev.hashnode.dev/" className="hover:text-primary">Blog</Link>
           </li>
           <li>
-            <Link to="#" className="hover:text-primary">Email</Link>
+          <a href="mailto:harunaalvin@yahoo.com" className="hover:text-primary">Email</a>
           </li>
         </ul>
       </div>

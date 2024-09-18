@@ -5,6 +5,7 @@ import { Dialog, DialogPanel, Disclosure, PopoverGroup } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import ResumeButton from './ResumeButton'
+import Logo from '../assets/Logo.png'
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -31,7 +32,7 @@ export default function NavBar() {
       >
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-            <h1 className="text-xl font-bold text-light bg-primary rounded-full p-2 lg:p-3 lg:text-3xl">A.H</h1>
+            <img className='w-[40px] sm:w-[60px]' src={Logo} alt="Logo" />
           </Link>
         </div>
 
@@ -77,7 +78,7 @@ export default function NavBar() {
           <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link to="/" className="-m-1.5 p-1.5">
-                <img alt="Logo" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" className="h-8 w-auto" />
+              <img className='w-[40px]' src={Logo} alt="Logo" />
               </Link>
               <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <XMarkIcon aria-hidden="true" className="h-6 w-6 text-light" />

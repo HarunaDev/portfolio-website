@@ -10,7 +10,7 @@ function ContactBanner() {
                 className="bg-background py-10 px-4 sm:px-8 md:px-16 flex flex-col justify-center items-center"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true, amount: 0.2 }}
             >
                 <h6 className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold mb-8">
@@ -23,7 +23,7 @@ function ContactBanner() {
 
                 <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
                     <CtaButton
-                        url="/contact"
+                        url="mailto:harunaalvin@yahoo.com"
                         text="Contact me"
                         styles="px-4 py-2 text-base sm:text-lg rounded font-semibold bg-primary text-light border-2 border-primary mb-4 md:mb-0"
                     />

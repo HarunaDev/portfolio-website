@@ -1,8 +1,8 @@
 function ResumeButton() {
   const downloadFile = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'resume.pdf';
+    link.href = '/ALVIN-HARUNA.pdf';
+    link.download = 'ALVIN-HARUNA.pdf';
     document.body.appendChild(link);
     link.click();
   };

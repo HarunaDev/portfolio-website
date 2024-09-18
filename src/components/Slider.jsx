@@ -15,28 +15,28 @@ function Slider() {
             id: 1,
             imageUrl: Img1,
             languages: "React, Django, Tailwind CSS",
-            demoLink: "https://example.com/demo1",
+            demoLink: "#",
             githubLink: "https://github.com/HarunaDev/chop-chop"
         },
         {
             id: 2,
             imageUrl: Img2,
             languages: "React, Tailwind CSS",
-            demoLink: "https://example.com/demo2",
-            // githubLink: "https://github.com/your-repo2"
+            demoLink: "https://harunaalvin.com.ng",
+            githubLink: "#"
         },
         {
             id: 3,
             imageUrl: Img3,
             languages: "Flask, Javascript, CSS",
-            demoLink: "https://example.com/demo3",
+            demoLink: "#",
             githubLink: "https://github.com/HarunaDev/saas-passport-maker"
         },
         {
             id: 4,
             imageUrl: Img1,
             languages: "React, Django, Tailwind CSS",
-            demoLink: "https://example.com/demo4",
+            demoLink: "#",
             githubLink: "https://github.com/HarunaDev/chop-chop"
         }
         // Add more project data as needed
