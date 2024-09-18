@@ -3,7 +3,10 @@ import ContactBanner from "../components/ContactBanner"
 function Contact() {
     return (
         <>
-            <ContactBanner />
+        <div className="lg:mt-[100px]">
+        <ContactBanner />
+        </div>
+            
         </>
     )
 }

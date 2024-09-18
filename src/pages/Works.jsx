@@ -9,7 +9,7 @@ function Works() {
         <>
             {/* First Section with Page Transition */}
             <motion.section
-                className="bg-background py-8 px-4 sm:px-8 md:px-16 lg:px-40 h-auto"
+                className="bg-background py-8 px-4 sm:px-8 md:px-16 lg:px-40 h-auto lg:mt-[100px]"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}

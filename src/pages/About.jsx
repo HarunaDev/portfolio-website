@@ -3,7 +3,7 @@ import Services from "../components/Services";
 
 function About() {
     return (
-        <main className="px-4 sm:px-6 lg:px-8">
+        <main className="px-4 sm:px-6 lg:px-8 lg:mt-[100px]">
             {/* Responsive First Section */}
             <section className="py-16 sm:py-16 md:py-20 lg:py-24 xl:py-32 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 flex flex-col justify-center items-start">
             <h1 className="text-light text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight max-w-full sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] mb-4 sm:mb-8 md:mb-10 lg:mb-12">

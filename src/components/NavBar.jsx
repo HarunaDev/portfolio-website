@@ -20,8 +20,10 @@ const mobileMenuVariants = {
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const closeMenu = () => setMobileMenuOpen(false)
+
   return (
-    <header className="bg-background">
+    <header className="bg-background lg:h-[120px] fixed w-full top-0 z-50">
       <motion.nav
         initial="hidden"
         animate="visible"
@@ -77,8 +79,8 @@ export default function NavBar() {
         <motion.div initial="hidden" animate="visible" exit="hidden" variants={mobileMenuVariants} transition={{ duration: 0.5 }}>
           <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link to="/" className="-m-1.5 p-1.5">
-              <img className='w-[40px]' src={Logo} alt="Logo" />
+              <Link to="/" className="-m-1.5 p-1.5" onClick={closeMenu}>
+                <img className='w-[40px]' src={Logo} alt="Logo" />
               </Link>
               <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
                 <XMarkIcon aria-hidden="true" className="h-6 w-6 text-light" />
@@ -89,14 +91,14 @@ export default function NavBar() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <Disclosure as="div" className="-mx-3">
-                    <Link to="/about" className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-light hover:text-secondary">
+                    <Link to="/about" className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-light hover:text-secondary" onClick={closeMenu}>
                       About
                     </Link>
                   </Disclosure>
-                  <Link to="/works" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-light hover:text-secondary">
+                  <Link to="/works" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-light hover:text-secondary" onClick={closeMenu}>
                     Works
                   </Link>
-                  <Link to="/contact" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-light hover:text-secondary">
+                  <Link to="/contact" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-light hover:text-secondary" onClick={closeMenu}>
                     Contact
                   </Link>
                 </div>
