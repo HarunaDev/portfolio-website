@@ -20,10 +20,10 @@ function Slider() {
         },
         {
             id: 2,
-            imageUrl: Img2,
-            languages: "React, Tailwind CSS",
-            demoLink: "https://harunadev.netlify.app",
-            githubLink: "https://harunadev.netlify.app"
+            imageUrl: Img1,
+            languages: "React, Django, Tailwind CSS",
+            demoLink: "https://github.com/HarunaDev/chop-chop",
+            githubLink: "https://github.com/HarunaDev/chop-chop"
         },
         {
             id: 3,
@@ -34,10 +34,10 @@ function Slider() {
         },
         {
             id: 4,
-            imageUrl: Img1,
-            languages: "React, Django, Tailwind CSS",
-            demoLink: "https://github.com/HarunaDev/chop-chop",
-            githubLink: "https://github.com/HarunaDev/chop-chop"
+            imageUrl: Img2,
+            languages: "React, Tailwind CSS",
+            demoLink: "https://harunadev.netlify.app",
+            githubLink: "https://harunadev.netlify.app"
         }
         // Add more project data as needed
     ];
