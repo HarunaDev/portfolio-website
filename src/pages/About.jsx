@@ -22,7 +22,7 @@ function About() {
         hidden: { opacity: 0 },
         visible: { opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } },
       }}
-      className="px-4 sm:px-6 lg:px-8 lg:mt-[100px]"
+      className="px-4 sm:px-6 lg:px-8 mt-[50px] lg:mt-[100px]"
     >
       {/* Responsive First Section */}
       <motion.section
