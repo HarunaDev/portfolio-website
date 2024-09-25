@@ -15,14 +15,14 @@ function Slider() {
             id: 1,
             imageUrl: Img1,
             languages: "React, Django, Tailwind CSS",
-            demoLink: "https://github.com/HarunaDev/chop-chop",
+            demoLink: "https://choji-frontend.onrender.com/",
             githubLink: "https://github.com/HarunaDev/chop-chop"
         },
         {
             id: 2,
             imageUrl: Img1,
             languages: "React, Django, Tailwind CSS",
-            demoLink: "https://github.com/HarunaDev/chop-chop",
+            demoLink: "https://choji-frontend.onrender.com/",
             githubLink: "https://github.com/HarunaDev/chop-chop"
         },
         {
