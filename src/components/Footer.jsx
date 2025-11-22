@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-background py-6 px-4 md:px-8 lg:px-24">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center text-center lg:text-left">
@@ -10,7 +11,7 @@ function Footer() {
             My passion for clean design and consumer-focused solutions ensures that every project I work on meets both business goals and user needs.
           </h6>
           <small className="text-[#999999] text-xs md:text-sm lg:text-base">
-            &copy; Alvin Haruna | All rights reserved 2024
+            &copy; Alvin Haruna | All rights reserved {currentYear}
           </small>
         </div>
 

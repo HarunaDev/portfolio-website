@@ -20,7 +20,7 @@ function Services() {
 
             {/* Animated Service Cards */}
             <motion.div
-                className="flex flex-col md:flex-row justify-between items-center gap-8 px-4 sm:px-6 md:px-8 lg:px-16"
+                className="flex flex-col md:flex-row justify-around items-center gap-8 px-4 sm:px-6 md:px-8 lg:px-16"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
@@ -35,14 +35,14 @@ function Services() {
                 >
                     <ServiceCard text="Frontend Development" />
                 </motion.div>
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8, duration: 0.6 }}
                     className="w-full max-w-xs bg-primary text-light p-6 rounded-lg shadow-md"
                 >
                     <ServiceCard text="Backend Development" />
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
