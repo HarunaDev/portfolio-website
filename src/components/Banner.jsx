@@ -1,4 +1,5 @@
 import Img from "../assets/banner-2.png"
+import HeroExperience from "./HeroExperience"
 
 export default function Banner() {
   return (
@@ -21,15 +22,20 @@ export default function Banner() {
             My name is <span className="text-primary">Alvin Haruna</span> and I am passionate about crafting efficient and innovative solutions.
             </p>
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8">
+
+          <figure>
+          <div className="relative mt-16 h-[500px] lg:mt-8">
             <img
               alt="App screenshot"
-              src={Img}
+              src='/programming.png'
               width={1824}
               height={1080}
-              className="absolute inset-0 m-auto mt-10 w-[300px] lg:w-[500px] sm:w-[500px] max-w-none rounded-md "
+              className="absolute inset-0 mx-auto w-[300px] lg:w-[400px] sm:w-[500px] max-w-none rounded-md "
             />
+
+            <HeroExperience />
           </div>
+          </figure>
         </div>
       </div>
     </div>
