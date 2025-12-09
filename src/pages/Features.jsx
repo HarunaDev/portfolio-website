@@ -163,6 +163,15 @@ const Features = () => {
               description="UI/UX & Web Development (React)"
             />
           </BentoTilt>
+          
+          <BentoTilt className="overflow-hidden rounded-md h-[250px] sm:h-[300px] md:h-[350px]">
+            <BentoCard 
+              src="videos/shapefun.mp4"
+              link="https://choji-frontend.onrender.com/"
+              title={<>Web3 Landing Page</>}
+              description="UI/UX, Web Development (React), Three.js, gsap"
+            />
+          </BentoTilt>
         </div>
 
         

@@ -13,7 +13,7 @@ function ContactBanner() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <h6 className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold mb-8">
+                <h6 className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold mb-8 hidden lg:block md:block ">
                     Let's Talk
                 </h6>
 

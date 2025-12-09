@@ -22,11 +22,14 @@ function Works() {
                             Dive in to explore how I turn ideas into functional, user-centric solutions.
                         </h2>
 
-                        <div className="text-center md:text-left">
+                        <div className="text-center md:text-left hidden sm:block">
+                            {/* <h4 className="text-semibold text-light text-xl sm:text-2xl mb-4">
+                                Checkout my github to see more projects
+                            </h4> */}
+
                             <h4 className="text-semibold text-light text-xl sm:text-2xl mb-4">
                                 Checkout my github to see more projects
                             </h4>
-
                             <CtaButton
                                 url="https://github.com/HarunaDev"
                                 text="View more"
@@ -39,6 +42,21 @@ function Works() {
                 {/* Horizontal Scroll Slider Component */}
                 <Slider />
             </motion.section>
+
+            <div className="text-center md:text-left sm:block md:hidden lg:hidden">
+                            {/* <h4 className="text-semibold text-light text-xl sm:text-2xl mb-4">
+                                Checkout my github to see more projects
+                            </h4> */}
+
+                            <h4 className="text-semibold text-light text-xl sm:text-2xl mb-4">
+                                Checkout my github to see more projects
+                            </h4>
+                            <CtaButton
+                                url="https://github.com/HarunaDev"
+                                text="View more"
+                                styles="border-2 border-primary bg-primary px-4 py-2 rounded font-semibold text-light text-base sm:text-lg"
+                            />
+                        </div>
 
             {/* Second Section with Scroll Animation */}
             <ContactBanner />            
