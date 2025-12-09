@@ -24,7 +24,7 @@ export default function Banner() {
           </div>
 
           <figure>
-          <div className="relative mt-16 h-[500px] lg:mt-8">
+          <div className="relative mt-16 h-[500px] w-full lg:mt-8">
             <img
               alt="App screenshot"
               src='/programming.png'
