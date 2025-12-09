@@ -2,11 +2,10 @@ import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { useMediaQuery } from 'react-responsive'
 
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 import HeroLights from './HeroLights'
 import { GamingChair } from '../models/Gaming_chair'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
+
 
 const HeroExperience = () => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)'})
@@ -21,10 +20,11 @@ const HeroExperience = () => {
             ? [0, 2.2, -1.5] 
             : [0, 4, -2] 
 
+
   return (
     <Canvas camera={{position: [0, 0, 15], fov: 45}} style={{ width: '100%', height: '500px' }}>
         
-        <OrbitControls enablePan={false} enableZoom={!isTablet} maxDistance={20} minDistance={5} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableRotate={true}
+        <OrbitControls enablePan={false} enableZoom={false} maxDistance={20} minDistance={5} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableRotate={true}
             rotateSpeed={0.5}
 />
 
