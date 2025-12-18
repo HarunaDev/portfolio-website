@@ -6,13 +6,14 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Works from './pages/Works'
 import Footer from './components/Footer'
-
+import PostHogPageviewTracker from './PostHogPageviewTracker'
 function App() {
   
 
   return (
     <>
       <BrowserRouter>
+      <PostHogPageviewTracker />
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
