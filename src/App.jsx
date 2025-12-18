@@ -7,12 +7,14 @@ import Contact from './pages/Contact'
 import Works from './pages/Works'
 import Footer from './components/Footer'
 import PostHogPageviewTracker from './PostHogPageviewTracker'
+import ScrollToTop from './components/ScrollToTop'
 function App() {
   
 
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop />
       <PostHogPageviewTracker />
         <NavBar />
         <Routes>
