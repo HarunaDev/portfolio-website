@@ -31,29 +31,6 @@ const BentoTilt = ({children, className = ''}) => {
   )
 }
 
-// const BentoCard = ({ src, title, description, isComingSoon }) => {
-//   return (
-//     <div className="relative w-full h-full">
-//       <video
-//         src={src}
-//         loop
-//         muted
-//         autoPlay
-//         className="absolute left-0 top-0 size-full w-full object-center"
-//       />
-
-//       <div className="relative z-10 flex size-full flex-col justify-between p-4 md:p-5 text-primary">
-//         <div>
-//           <h1 className="bento-title special-font text-lg md:text-xl lg:text-2xl">{title}</h1>
-//           {description && (
-//             <p className="mt-2 md:mt-3 max-w-64 text-xs md:text-sm lg:text-base">{description}</p>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 
 const BentoCard = ({ src, title, description, isComingSoon, link }) => {
   return (

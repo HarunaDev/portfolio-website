@@ -4,7 +4,7 @@ import CtaButton from "../components/CtaButton";
 import Slider from "../components/Slider"; // The horizontal scroll slider
 import ContactBanner from "../components/ContactBanner";
 
-function Works() {
+const Works = () : JSX.Element => {
     return (
         <>
             {/* First Section with Page Transition */}
