@@ -1,18 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import CtaButton from "../components/CtaButton";
 import Services from "../components/Services";
 
-const sectionVariants = {
+const sectionVariants : Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeInOut' } },
 };
 
-const buttonVariants = {
+const buttonVariants : Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: 'easeInOut', delay: 0.2 } },
 };
 
-function About() {
+const About = () : JSX.Element => {
   return (
     <motion.main 
       initial="hidden"
