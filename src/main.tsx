@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import App from './App'
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
 
@@ -12,10 +12,16 @@ posthog.init('phc_3BWEZGRxPSCE0KYV1mOYlfkCtJKP5L99O4yVRlAB5Lq', {
   
 })
 
-createRoot(document.getElementById('root')).render(
+const container = document.getElementById('root')
+
+if (!container) {
+  throw new Error('Root container missing in index.html')
+}
+
+createRoot(container).render(
   <StrictMode>
     <PostHogProvider client={posthog}>
     <App />
     </PostHogProvider>
-  </StrictMode>,
+  </StrictMode>
 )
