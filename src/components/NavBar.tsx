@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { Dialog, DialogPanel, Disclosure, PopoverGroup } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import ResumeButton from './ResumeButton'
 import Logo from '../assets/Logo.png'
 
-const navVariants = {
+const navVariants: Variants = {
   hidden: { opacity: 0, y: -20 },
   visible: { opacity: 1, y: 0 },
 }
 
-const mobileMenuVariants = {
+const mobileMenuVariants: Variants = {
   hidden: { x: "100%" },
   visible: { x: 0 },
 }
 
-export default function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const NavBar = () : JSX.Element => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
 
-  const closeMenu = () => setMobileMenuOpen(false)
+  const closeMenu = (): void => setMobileMenuOpen(false)
 
   return (
     <header className="bg-background lg:h-[120px] fixed w-full top-0 z-50">
@@ -114,3 +114,5 @@ export default function NavBar() {
     </header>
   )
 }
+
+export default NavBar
