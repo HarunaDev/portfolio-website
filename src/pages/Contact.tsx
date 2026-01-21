@@ -1,6 +1,6 @@
 import ContactBanner from "../components/ContactBanner"
 
-function Contact() {
+const Contact = () : JSX.Element => {
     return (
         <>
         <div className="mt-[50px] lg:mt-[100px]">

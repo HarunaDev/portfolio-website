@@ -1,6 +1,6 @@
 import * as THREE from "three"
 
-const HeroLights = () => {
+const HeroLights = () : JSX.Element => {
   return (
     <>
     <ambientLight intensity={0.6}  color="#3CAF2A"/>
