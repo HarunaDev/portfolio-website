@@ -10,7 +10,10 @@ Title: Gaming chair
 import * as THREE from "three";
 import { GLTF } from "three-stdlib";
 import { useGLTF } from '@react-three/drei'
-// import  GroupProps  from "@react-three/fiber";
+import { forwardRef } from "react";
+import  {ThreeElements}  from "@react-three/fiber";
+
+type GroupProps = ThreeElements["group"];
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -42,10 +45,10 @@ type GLTFResult = GLTF & {
   };
 };
 
-export function GamingChair(props: GLTFResult) {
-  const { nodes, materials } = useGLTF<string>('/models/gaming_chair.glb');
+export const GamingChair = forwardRef<THREE.Group, GroupProps>((props, ref) => {
+  const { nodes, materials } = useGLTF('/models/gaming_chair.glb');
   return (
-    <group {...props} dispose={null}>
+    <group ref={ref} {...props} dispose={null}>
       <mesh geometry={nodes.adjustment_aiStandardSurface1_0.geometry} material={materials.aiStandardSurface1} />
       <mesh geometry={nodes.pCube6_aiStandardSurface1_0.geometry} material={materials.aiStandardSurface1} position={[1.12, -9.447, 1.613]} rotation={[0.779, -0.038, 2.354]} scale={[0.033, 1.248, 0.737]} />
       <mesh geometry={nodes.pCube9_aiStandardSurface1_0.geometry} material={materials.aiStandardSurface1} />
@@ -71,5 +74,6 @@ export function GamingChair(props: GLTFResult) {
     </group>
   )
 }
+);
 
-useGLTF.preload('/models/gaming_chair.glb')
+useGLTF.preload('/models/gaming_chair.glb');
