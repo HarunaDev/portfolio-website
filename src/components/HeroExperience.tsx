@@ -1,20 +1,20 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { useMediaQuery } from 'react-responsive'
-
+import * as THREE from 'three'
 import { useRef } from 'react'
 import HeroLights from './HeroLights'
 import { GamingChair } from '../models/Gaming_chair'
 
 
-const HeroExperience = () => {
+const HeroExperience = () : JSX.Element => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)'})
     const isMobile = useMediaQuery({ query: '(max-width: 760px)'})
 
-    const chairRef = useRef()
+    const chairRef = useRef<THREE.Group | null>(null)
 
     // Responsive positions
-    const chairPosition = isMobile 
+    const chairPosition : [number, number, number] = isMobile 
         ? [0, 7.2, -1] 
         : isTablet 
             ? [0, 2.2, -1.5] 
