@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
 
-function Services() {
+const Services = () : JSX.Element => {
     return (
         <motion.section
             className="bg-background pb-16 px-4 sm:px-6 lg:px-8"
