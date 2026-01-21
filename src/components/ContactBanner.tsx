@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import ResumeButton from "../components/ResumeButton";
+import ResumeButton from "./ResumeButton";
 import CtaButton from "./CtaButton";
 import { motion } from "framer-motion";
 
-function ContactBanner() {
+const ContactBanner = () : JSX.Element => {
     return (
         <>
             <motion.section

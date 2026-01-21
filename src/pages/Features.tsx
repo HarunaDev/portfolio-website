@@ -1,11 +1,17 @@
 import {useState, useRef} from "react";
 import { Link } from "react-router-dom";
+import type { ReactNode, MouseEvent } from "react"
 
-const BentoTilt = ({children, className = ''}) => {
-  const [transformStyle, setTransformStyle] = useState('')
-  const itemRef = useRef(null)
+interface BentoTiltProps {
+  children: ReactNode,
+  className?: string
+}
 
-  const handleMouseMove = (e) => {
+const BentoTilt = ({children, className }: BentoTiltProps) : JSX.Element => {
+  const [transformStyle, setTransformStyle] = useState<string>('')
+  const itemRef = useRef<HTMLDivElement | null>(null)
+
+  const handleMouseMove = (e : MouseEvent<HTMLDivElement>) : void => {
     if(!itemRef.current) return
 
     const {left, top, width, height} = itemRef.current.getBoundingClientRect()
@@ -20,7 +26,7 @@ const BentoTilt = ({children, className = ''}) => {
     setTransformStyle(newTransform)
   }
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = () : void => {
     setTransformStyle('')
   }
 
@@ -31,8 +37,14 @@ const BentoTilt = ({children, className = ''}) => {
   )
 }
 
+interface BentoCardProps {
+  src: string
+  title: ReactNode
+  description?: string
+  link: string
+}
 
-const BentoCard = ({ src, title, description, isComingSoon, link }) => {
+const BentoCard = ({ src, title, description, link } : BentoCardProps): JSX.Element => {
   return (
     <div className="relative w-full h-full">
       <video
@@ -60,7 +72,7 @@ const BentoCard = ({ src, title, description, isComingSoon, link }) => {
   );
 };
 
-const Features = () => {
+const Features = () : JSX.Element => {
   return (
     <section className="">
       <div className="container mx-auto px-4 md:px-0">
