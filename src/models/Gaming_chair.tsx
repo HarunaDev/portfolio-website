@@ -7,11 +7,43 @@ Source: https://sketchfab.com/3d-models/gaming-chair-601afdea98f14c488ee0be0ffb4
 Title: Gaming chair
 */
 
-import React from 'react'
+import * as THREE from "three";
+import { GLTF } from "three-stdlib";
 import { useGLTF } from '@react-three/drei'
+// import  GroupProps  from "@react-three/fiber";
 
-export function GamingChair(props) {
-  const { nodes, materials } = useGLTF('/models/gaming_chair.glb')
+type GLTFResult = GLTF & {
+  nodes: {
+    adjustment_aiStandardSurface1_0: THREE.Mesh;
+    pCube6_aiStandardSurface1_0: THREE.Mesh;
+    pCube9_aiStandardSurface1_0: THREE.Mesh;
+    pPlane3_aiStandardSurface1_0: THREE.Mesh;
+    pCylinder14_aiStandardSurface1_0: THREE.Mesh;
+    pCylinder10_aiStandardSurface1_0: THREE.Mesh;
+    Bolt_aiStandardSurface1_0: THREE.Mesh;
+    Bolt1_aiStandardSurface1_0: THREE.Mesh;
+    Bolt2_aiStandardSurface1_0: THREE.Mesh;
+    Bolt3_aiStandardSurface1_0: THREE.Mesh;
+    polySurface11_aiStandardSurface1_0: THREE.Mesh;
+    wheel_aiStandardSurface1_0: THREE.Mesh;
+    wheel2_aiStandardSurface1_0: THREE.Mesh;
+    wheel3_aiStandardSurface1_0: THREE.Mesh;
+    wheel4_aiStandardSurface1_0: THREE.Mesh;
+    polySurface24_aiStandardSurface1_0: THREE.Mesh;
+    polySurface43_aiStandardSurface1_0: THREE.Mesh;
+    back_bone_aiStandardSurface1_0: THREE.Mesh;
+    butt_aiStandardSurface1_0: THREE.Mesh;
+    L_handle_aiStandardSurface1_0: THREE.Mesh;
+    R_handle_aiStandardSurface1_0: THREE.Mesh;
+    back2_aiStandardSurface1_0: THREE.Mesh;
+  };
+  materials: {
+    aiStandardSurface1: THREE.MeshStandardMaterial;
+  };
+};
+
+export function GamingChair(props: GLTFResult) {
+  const { nodes, materials } = useGLTF<string>('/models/gaming_chair.glb');
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.adjustment_aiStandardSurface1_0.geometry} material={materials.aiStandardSurface1} />
