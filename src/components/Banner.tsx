@@ -1,7 +1,7 @@
-import Img from "../assets/banner-2.png"
+// import Img from "../assets/banner-2.png"
 import HeroExperience from "./HeroExperience"
 
-export default function Banner() {
+const Banner = () : JSX.Element => {
   return (
     <div className="bg-background">
       <div className="mx-auto max-w-7xl py-4 sm:px-6 sm:py-32 lg:px-8">
@@ -19,7 +19,7 @@ export default function Banner() {
               <span className="text-primary">Developer</span>
             </h2>
             <p className="mt-6 text-xl leading-8 text-light">
-            My name is <span className="text-primary">Alvin Haruna</span> and I am passionate about crafting efficient and innovative solutions.
+            My name is{' '}<span className="text-primary">Alvin Haruna</span> and I am passionate about crafting efficient and innovative solutions.
             </p>
           </div>
 
@@ -41,3 +41,5 @@ export default function Banner() {
     </div>
   )
 }
+
+export default Banner;
